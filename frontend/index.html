@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>🎬 MovieTime</h1>
+    <p>Book your favorite movie tickets</p>
+</header>
+
+<main class="container">
+    <h2>Select Your Movie</h2>
+
+    <select id="movie">
+        <option value="Avengers">Avengers: Endgame</option>
+        <option value="Avatar">Avatar</option>
+        <option value="Interstellar">Interstellar</option>
+        <option value="Inception">Inception</option>
+    </select>
+
+    <h2>Select Show Time</h2>
+
+    <select id="show">
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="1:00 PM">1:00 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+        <option value="7:00 PM">7:00 PM</option>
+    </select>
+
+    <h2>Select Your Seats</h2>
+
+    <div class="screen">SCREEN</div>
+
+    <div class="seat-container" id="seats"></div>
+
+    <div class="legend">
+        <span>🟩 Available</span>
+        <span>🟦 Selected</span>
+        <span>🟥 Booked</span>
+    </div>
+
+    <div class="summary">
+        <h3>Booking Summary</h3>
+        <p>Selected Seats: <span id="count">0</span></p>
+        <p>Total Price: ₹<span id="total">0</span></p>
+        <button id="bookBtn">Book Tickets</button>
+        <p id="message"></p>
+        <p id="connection">Connecting...</p>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
